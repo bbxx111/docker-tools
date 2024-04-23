@@ -8,7 +8,7 @@ RUN apk add --update ca-certificates \
   && apk add --update gettext \
   && apk add --update git
 
-ENV KUBE_LATEST_VERSION="v1.27.3"
+ENV KUBE_LATEST_VERSION="v1.28.9"
 RUN curl -L https://dl.k8s.io/release/${KUBE_LATEST_VERSION}/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
   && chmod +x /usr/local/bin/kubectl
 
