@@ -18,6 +18,6 @@ cd kubectl-envsubst
 docker build -t bbxx111/kubectl-envsubst:v1.28.9 -f kubectl-envsubst.Dockerfile .
 docker push bbxx111/kubectl-envsubst:v1.28.9
 
-docker build -t bbxx111/node-jq:20-alpine -f node-jq.Dockerfile .
-docker push bbxx111/node-jq:20-alpine
+docker build -t bbxx111/node-jq:20 -f node-jq.Dockerfile .
+docker push bbxx111/node-jq:20
 ```
