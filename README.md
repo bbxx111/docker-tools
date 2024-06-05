@@ -20,4 +20,11 @@ docker push bbxx111/kubectl-envsubst:v1.28.9
 
 docker build -t bbxx111/node-jq:20 -f node-jq.Dockerfile .
 docker push bbxx111/node-jq:20
+
+# 构建多平台镜像。
+docker build -t bbxx111/bazelisk:v1.20.0-ubuntu22.04 --platform linux/amd64,linux/arm64 -f bazelisk.Dockerfile .
+# 分平台构建镜像。
+docker build -t bbxx111/bazelisk:v1.20.0-ubuntu22.04-amd64 --platform linux/amd64 --build-arg TARGETPLATFORM=linux/amd64 -f bazelisk.Dockerfile .
+docker build -t bbxx111/bazelisk:v1.20.0-ubuntu22.04-arm64 --platform linux/arm64 --build-arg TARGETPLATFORM=linux/arm64 -f bazelisk.Dockerfile .
+
 ```
